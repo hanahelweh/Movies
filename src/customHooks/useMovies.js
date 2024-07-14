@@ -16,7 +16,7 @@ export function useMovies(query){
           try{
             setIsLoading(true);
             setError('');
-            const response = await fetch(`https://www.omdbapi.com/?apikey=${apikey}&s=${query}`,{signal:controller.signal});
+            const response = await fetch(`https://cors-anywhere.herokuapp.com/http://www.omdbapi.com/?apikey=${apikey}&s=${query}`,{signal:controller.signal});
             if(!response.ok){
               throw new Error("Something went wrong");
             }

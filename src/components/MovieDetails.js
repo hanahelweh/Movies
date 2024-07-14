@@ -15,7 +15,7 @@ function MovieDetails({current,setCurrent,watchList,setWatchList}) {
       try{
         setIsLoading(true);
         setError('');
-        const response = await fetch(`http://www.omdbapi.com/?apikey=2f8c3b60&i=${current}`);
+        const response = await fetch(`https://www.omdbapi.com/?apikey=2f8c3b60&i=${current}`);
         if(!response.ok){
           throw new Error("something wrong");
         }
