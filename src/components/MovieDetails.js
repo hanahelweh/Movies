@@ -17,7 +17,7 @@ export default function MovieDetails({current,setCurrent,watchList,setWatchList,
         async function getCurrentMovie(){
             try{
                 setIsLoading(true);
-                const response = await fetch(`http://www.omdbapi.com/?apikey=2f8c3b60&i=${current}`);
+                const response = await fetch(`https://www.omdbapi.com/?apikey=2f8c3b60&i=${current}`);
                 const data = await response.json();
                 setCurrentMovie(data);
             }catch(error){
