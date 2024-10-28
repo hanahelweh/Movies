@@ -7,7 +7,7 @@ export function useFetch(query){
         async function fetchData(){
             try{
                 setIsLoading(true);
-                const response = await fetch(`http://www.omdbapi.com/?apikey=${key}&s=${query}`);
+                const response = await fetch(`https://www.omdbapi.com/?apikey=${key}&s=${query}`);
                 const fetchedData = await response.json();
                 setData(fetchedData.Search);
             }catch(error){
