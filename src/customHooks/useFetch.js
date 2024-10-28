@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+const key="2f8c3b60";
 export function useFetch(query){
     const [data,setData]= useState([]);
     const [isLoading,setIsLoading] = useState(false);
@@ -7,7 +7,7 @@ export function useFetch(query){
         async function fetchData(){
             try{
                 setIsLoading(true);
-                const response = await fetch(`http://www.omdbapi.com/?apikey=2f8c3b60&s=${query}`);
+                const response = await fetch(`http://www.omdbapi.com/?apikey=${key}&s=${query}`);
                 const fetchedData = await response.json();
                 setData(fetchedData.Search);
             }catch(error){
